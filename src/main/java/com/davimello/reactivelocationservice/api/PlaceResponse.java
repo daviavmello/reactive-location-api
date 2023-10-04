@@ -2,5 +2,5 @@ package com.davimello.reactivelocationservice.api;
 
 import java.time.LocalDateTime;
 
-public record PlaceResponse(String name, String slug, String state, LocalDateTime createdAt, LocalDateTime updatedAt) {
+public record PlaceResponse(String name, String slug, String state, String city, LocalDateTime createdAt, LocalDateTime updatedAt) {
 }
