@@ -15,12 +15,13 @@ class ReactiveLocationServiceApplicationTests {
     public void testCreatePlaceSuccess() {
         var name = "Valid Name";
         var state = "Valid State";
+        var city = "Valid City";
         var slug = "valid-name";
 
         webTestClient
                 .post()
                 .uri("/places")
-                .bodyValue(new PlaceRequest(name, state))
+                .bodyValue(new PlaceRequest(name, state, city))
                 .exchange()
                 .expectBody()
                 .jsonPath("name").isEqualTo(name)
@@ -34,11 +35,12 @@ class ReactiveLocationServiceApplicationTests {
     public void testCreatePlaceFailure() {
         var name = "";
         var state = "";
+        var city = "";
 
         webTestClient
                 .post()
                 .uri("/places")
-                .bodyValue(new PlaceRequest(name, state))
+                .bodyValue(new PlaceRequest(name, state, city))
                 .exchange()
                 .expectStatus().isBadRequest();
     }
