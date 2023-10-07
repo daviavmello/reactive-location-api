@@ -33,7 +33,7 @@ API for managing places (CRUD) that is part of [this challenge](https://github.c
 ```
 - Execute:
 ```
-java -jar place-service/target/place-service-0.0.1-SNAPSHOT.jar
+java -jar reactive-location-api/target/reactive-location-api-0.0.1-SNAPSHOT.jar
 ```
 
 The API can be accessed at [localhost:8080](http://localhost:8080).
